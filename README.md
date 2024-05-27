@@ -2,7 +2,7 @@
 
 Personal Money Manager is a simple yet powerful application designed to help you track and manage your finances efficiently. Whether you want to monitor your expenses, track your income, or set budget goals, this application provides the tools you need to stay on top of your finances.
 
-## Features
+## Features<a name="features"></a>
 
 - **Expense Tracking:** Keep track of your daily expenses by categorizing transactions and monitoring spending patterns.
 - **Income Management:** Record your sources of income and track your earnings over time.
@@ -11,7 +11,7 @@ Personal Money Manager is a simple yet powerful application designed to help you
 - **Data Visualization:** Visualize your financial data through charts and graphs to identify trends and patterns.
 - **Secure and Private:** Your financial data is securely stored and encrypted to ensure privacy and confidentiality.
 
-## Installation
+## Installation<a name="installation"></a>
 
 1. **Clone the Repository:**
    ```bash
@@ -32,7 +32,7 @@ Personal Money Manager is a simple yet powerful application designed to help you
 
    Open your web browser and go to [http://localhost:5000](http://localhost:5000) to access the Personal Money Manager application.
 
-## Usage
+## Usage<a name="usage"></a>
 
 1. **Sign Up:** Create an account by providing your email address and setting a password.
 2. **Log In:** Log in to your account using your email address and password.
