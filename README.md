@@ -39,8 +39,3 @@ Personal Money Manager is a simple yet powerful application designed to help you
 3. **Add Transactions:** Record your expenses and income transactions by providing details such as amount, category, and description.
 4. **Set Budgets:** Set monthly budgets for different expense categories to help you manage your spending.
 5. **Generate Reports:** Generate reports and insights to analyze your financial data and track your progress over time.
-
-## Contributing
-
-   
-
