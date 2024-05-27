@@ -9,7 +9,6 @@ Personal Money Manager is a simple yet powerful application designed to help you
 - [Usage](#usage)
 
 ## Overview<a name="overview"></a>
-## Overview <a name="overview"></a>
 Personal Money Manager is an application designed to help individuals manage their finances effectively. The tool provides a user-friendly interface for tracking income, expenses, and savings goals. Users can categorize transactions, generate financial reports, and gain insights into their spending habits. The application aims to promote better financial health by making it easier to monitor and control personal finances.
 
 ## Features<a name="features"></a>
