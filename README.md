@@ -42,6 +42,6 @@ Personal Money Manager is a simple yet powerful application designed to help you
 
 ## Contributing
 
-Contributions to the Personal Money Manager project are welcome! If you have suggestions for new features, bug fixes, or improvements, feel free to submit a pull request or open an issue on GitHub.
+Contributions to the Personal Money Manager project are welcome!
    
 
