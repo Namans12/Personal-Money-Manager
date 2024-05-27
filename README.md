@@ -42,6 +42,5 @@ Personal Money Manager is a simple yet powerful application designed to help you
 
 ## Contributing
 
-Contributions to the Personal Money Manager project are welcome!
    
 
