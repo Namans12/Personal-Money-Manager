@@ -39,9 +39,7 @@ cd Personal-Money-Manager
 npm install
 ```
 
-> `node_modules/` is committed to this repository (~5,000 files). It should be removed and ignored:
->
-> ```bash
+Dependencies are not vendored — `package-lock.json` is committed so installs are reproducible.bash
 > git rm -r --cached node_modules
 > echo "node_modules/" >> .gitignore
 > ```
@@ -104,7 +102,6 @@ Committed at the repository root: `login.png`, `SignUp.png`, `Balance.png`, `Add
 
 - No automated tests
 - Credentials and secrets are in source rather than configuration
-- `node_modules/` is version-controlled
 - No input validation layer beyond what Mongoose schemas enforce
 - Single-currency; no multi-user sharing or export
 
