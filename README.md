@@ -2,15 +2,7 @@
 
 Web app for tracking income, expenses, payments, and EMIs, with user accounts and email notifications. Node.js, Express, EJS, and MongoDB.
 
-> ### 🔴 Committed database credentials — rotate these
->
-> [`server.js`](server.js) contains a **live MongoDB Atlas connection string with username and password in plain text**, and this repository is public:
->
-> ```js
-> const url = 'mongodb+srv://<user>:<password>@cluster0.<id>.mongodb.net/MoneyManager'
-> ```
->
-> Anyone who has seen this repository can read and write that database. Rotating the password is the urgent part — removing the line from the file does not help while the old credential still works. See [Configuration](#configuration).
+> **Connection string comes from `MONGODB_URI`.** See [Configuration](#configuration).
 
 ## Overview
 
@@ -56,14 +48,7 @@ npm install
 
 ## Configuration
 
-The database URL is currently hardcoded near the top of `server.js`. Move it to an environment variable:
-
-```js
-require('dotenv').config()
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-```
-
-Then create `.env` (and add it to `.gitignore`):
+`server.js` reads the connection string from `MONGODB_URI` and exits with a clear message if it is missing. Copy `.env.example` to `.env` and fill it in:
 
 ```
 MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/MoneyManager
@@ -73,7 +58,9 @@ SMTP_USER=
 SMTP_PASS=
 ```
 
-**Rotate the existing database password first.** Editing `server.js` leaves the old credential in git history and still valid on the cluster.
+`.env` is gitignored. Loading it needs `dotenv` (`npm install`); if it is absent the app still runs from environment variables set externally.
+
+> An Atlas connection string including username and password was previously hardcoded here and committed to this public repository. It has been scrubbed from every commit in git history. **Rotate the Atlas password regardless** — it was publicly visible and may already have been harvested by automated scanners.
 
 ## Usage
 
