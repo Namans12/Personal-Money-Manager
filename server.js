@@ -1,3 +1,5 @@
+// Load .env if dotenv is installed; env vars set externally work either way.
+try { require('dotenv').config() } catch (e) { /* run `npm install` to enable .env files */ }
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
@@ -9,9 +11,12 @@ const coockieParser = require('cookie-parser')
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 
-// Database connection
-const url = 'mongodb+srv://***REMOVED***@cluster0.x02juvt.mongodb.net/MoneyManager'
-// const url = 'mongodb+srv://***REMOVED***@cluster0.x02juvt.mongodb.net/?retryWrites=true&w=majority';
+// Database connection — see .env.example
+const url = process.env.MONGODB_URI;
+if (!url) {
+    console.error('MONGODB_URI is not set. Copy .env.example to .env and fill it in.');
+    process.exit(1);
+}
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 const connection = mongoose.connection;
 connection.once('open', ()=>{
